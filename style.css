@@ -59,7 +59,7 @@ button {
   color: #353839;
   opacity: 0.5;
   font-family:ShinGo;
-  font-size:2rem;
+  font-size:1em;
 }
 @keyframes zoom-out {
   0% {
