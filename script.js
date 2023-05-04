@@ -4,7 +4,7 @@ function Addname() {
  const nameArea = document
   .getElementById("namearea");
  const newDivString =
-  '<div class="name">' + newName +
+  '<div class="name">' + String(newName) +
   '<button onclick="deleteName(event)" id="x">X</button></div>';
  nameArea.innerHTML += newDivString;
  document.getElementById("text").value = "";
