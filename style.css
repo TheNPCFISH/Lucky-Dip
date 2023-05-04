@@ -29,7 +29,7 @@ html, body {
   background-color: #EF476F;
   color:#353839;
   font-family: ShinGo;
-  font-size:2rem;
+  font-size:1rem;
 }
 button {
   font-family:ShinGo;
@@ -42,6 +42,10 @@ button {
   border-color:transparent;
   background-color: transparent;
   color:#353839;
+}
+#names input {
+  font-size: 1rem;
+  width:100%
 }
 .name {
   box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.2);
@@ -62,7 +66,7 @@ button {
   color: #353839;
   opacity: 0.5;
   font-family:ShinGo;
-  font-size:3rem;
+  font-size:1rem;
 }
 @keyframes zoom-out {
   0% {
