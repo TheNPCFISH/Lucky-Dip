@@ -25,6 +25,9 @@ button {
   background-color: transparent;
   color:#FEFFFE;
 }
+#add {
+  font-weight:bold;
+}
 html, body {
   background-color: #EF476F;
   color:#353839;
