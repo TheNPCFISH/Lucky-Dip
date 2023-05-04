@@ -9,6 +9,7 @@
   padding-right: 10%;
   padding-top: 20px;
   padding-bottom: 20px;
+  font-size:1.5em;
 }
 button {
   cursor:pointer;
@@ -25,9 +26,11 @@ html, body {
   background-color: #EF476F;
   color:#353839;
   font-family: ShinGo;
+  font-size:1em;
 }
 button {
   font-family:ShinGo;
+  font-size:.75em;
 }
 
 #names input, #add {
@@ -56,6 +59,7 @@ button {
   color: #353839;
   opacity: 0.5;
   font-family:ShinGo;
+  font-size:.75em;
 }
 @keyframes zoom-out {
   0% {
