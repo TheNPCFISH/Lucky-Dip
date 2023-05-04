@@ -3,10 +3,10 @@
   color: #FEFFFE;
   border-radius: 5px;
   border: solid #2550FF 2px;
-  margin: 20px;
-  margin-right: 20px;
-  padding-left: 10%;
-  padding-right: 10%;
+  margin: 10px;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
   font-size:2rem;
@@ -25,9 +25,9 @@ button {
   background-color: transparent;
   color:#FEFFFE;
 }
-#add {
+/*#add {
   font-weight:bold;
-}
+}*/
 html, body {
   background-color: #EF476F;
   color:#353839;
@@ -41,7 +41,9 @@ button {
   font-family:ShinGo;
   font-size:1rem;
 }
-
+input:focus{
+  outline: none;
+}
 #names input, #add {
   margin:0px 0px 0px 0px;
   border-radius: 0px;
@@ -96,6 +98,7 @@ button {
   transition:1s;
   transform: scale(1);
   opacity:1;
+  grid-column: 40%;
 }
 
 .name.hide {
@@ -121,5 +124,12 @@ button {
 }
 @font-face {
   font-family: ShinGo;
-  src: url(ShinGo.woff);
+  src: url("ShinGo.woff");
+}
+@media screen and (min-width: 768px) {
+  #namearea {
+    transition: 1s;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 }
