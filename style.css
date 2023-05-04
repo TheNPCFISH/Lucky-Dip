@@ -31,9 +31,12 @@ html, body {
   font-family: ShinGo;
   font-size:1rem;
 }
+h1 {
+  font-size:2rem;
+}
 button {
   font-family:ShinGo;
-  font-size:1.5rem;
+  font-size:1rem;
 }
 
 #names input, #add {
