@@ -1,0 +1,98 @@
+.name {
+  background-color: #3772FF;
+  color: #FEFFFE;
+  border-radius: 5px;
+  border: solid #2550FF 2px;
+  margin: 20px;
+  margin-right: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+button {
+  cursor:pointer;
+}
+.name button {
+  position: absolute;
+  left: 75%;
+  border-radius: 0px;
+  border-color:transparent;
+  background-color: transparent;
+  color:#FEFFFE;
+}
+html, body {
+  background-color: #EF476F;
+  color:#353839;
+}
+#names input, #add {
+  margin:0px 0px 0px 0px;
+  border-radius: 0px;
+  border-color:transparent;
+  background-color: transparent;
+  color:#353839;
+}
+.name {
+  box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.2);
+-webkit-box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.2);
+}
+#choose {
+  position:relative;
+  top: 2px;
+  box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.2);
+-webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.2);
+}
+#names input {
+  border-bottom: 1.5px solid #353839;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #353839;
+  opacity: 0.5; /* Firefox */
+}
+@keyframes zoom-out {
+  0% {
+    transform: scale(1);
+    opacity:1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes zoom-in {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.name {
+  transition:1s;
+  transform: scale(1);
+  opacity:1;
+}
+
+.name.hide {
+  animation: zoom-out 3s ease;
+  transform: scale(0);
+  transition:0s;
+  opacity:0;
+}
+
+.winner {
+  animation: zoom-out 1s ease;
+  animation: zoom-in 1s ease 1s;
+  transition:1s;
+  opacity:1;
+  transform: scale(1);
+}
+
+#choose {
+  background-color:#FFDD00;
+  border: solid #FFB700 2.5px;
+  border-radius: 5px;
+  color: #353839;
+}
