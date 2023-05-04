@@ -24,6 +24,7 @@ button {
 html, body {
   background-color: #EF476F;
   color:#353839;
+  font-family: ShinGo;
 }
 #names input, #add {
   margin:0px 0px 0px 0px;
@@ -47,9 +48,10 @@ html, body {
 #names input {
   border-bottom: 1.5px solid #353839;
 }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
   color: #353839;
-  opacity: 0.5; /* Firefox */
+  opacity: 0.5;
+  font-family:ShinGo;
 }
 @keyframes zoom-out {
   0% {
@@ -95,4 +97,8 @@ html, body {
   border: solid #FFB700 2.5px;
   border-radius: 5px;
   color: #353839;
+}
+@font-face {
+  font-family: ShinGo;
+  src: url(ShinGo.woff);
 }
