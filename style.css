@@ -30,7 +30,7 @@ html, body {
 }
 button {
   font-family:ShinGo;
-  font-size:1.5tem;
+  font-size:1.5rem;
 }
 
 #names input, #add {
@@ -59,7 +59,7 @@ button {
   color: #353839;
   opacity: 0.5;
   font-family:ShinGo;
-  font-size:1em;
+  font-size:0.5rem;
 }
 @keyframes zoom-out {
   0% {
