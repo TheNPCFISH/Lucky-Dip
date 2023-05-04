@@ -26,6 +26,10 @@ html, body {
   color:#353839;
   font-family: ShinGo;
 }
+button {
+  font-family:ShinGo;
+}
+
 #names input, #add {
   margin:0px 0px 0px 0px;
   border-radius: 0px;
