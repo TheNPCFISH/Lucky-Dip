@@ -9,7 +9,7 @@
   padding-right: 10%;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size:10em;
+  font-size:2rem;
 }
 button {
   cursor:pointer;
@@ -26,11 +26,11 @@ html, body {
   background-color: #EF476F;
   color:#353839;
   font-family: ShinGo;
-  font-size:1em;
+  font-size:2rem;
 }
 button {
   font-family:ShinGo;
-  font-size:10em;
+  font-size:1.5tem;
 }
 
 #names input, #add {
@@ -47,7 +47,7 @@ button {
 }
 #choose {
   position:relative;
-  top: 2px;
+  top: 3px;
   box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.2);
 -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.2);
 -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.2);
@@ -59,7 +59,7 @@ button {
   color: #353839;
   opacity: 0.5;
   font-family:ShinGo;
-  font-size:10em;
+  font-size:2rem;
 }
 @keyframes zoom-out {
   0% {
