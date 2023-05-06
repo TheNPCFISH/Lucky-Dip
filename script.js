@@ -46,3 +46,11 @@ function chooseWinner() {
   });
  }, 5000);
 }
+
+var input = document.getElementById("text");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("add").click();
+  }
+});
