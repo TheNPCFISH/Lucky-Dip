@@ -1,6 +1,6 @@
 .name {
-  background-color: #3772FF;
-  color: #FEFFFE;
+  background-color: #A0C4FF;
+  color: #FFFFFC;
   border-radius: 5px;
   border: solid #2550FF 2px;
   margin: 10px;
@@ -23,14 +23,14 @@ button {
   border-radius: 0px;
   border-color:transparent;
   background-color: transparent;
-  color:#FEFFFE;
+  color:#FFFFFC;
 }
 /*#add {
   font-weight:bold;
 }*/
 html, body {
   background-color: #EF476F;
-  color:#353839;
+  color:#FFADAD;
   font-family: ShinGo;
   font-size:1rem;
 }
