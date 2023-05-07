@@ -9,7 +9,7 @@
   padding-right: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size:110%;
+  font-size:130%;
 }
 #x {
   opacity:0.2;
@@ -35,15 +35,15 @@ html, body {
   background-color: #FF006E;
   color:#353839;
   font-family: ShinGo;
-  font-size:100%;
+  font-size:150%;
 }
 h1 {
-  font-size:160%;
+  font-size:200%;
   font-color:#FEFFFE;
 }
 button {
   font-family:ShinGo;
-  font-size:100%;
+  font-size:170%;
 }
 input:focus{
   outline: none;
@@ -56,7 +56,7 @@ input:focus{
   color:#353839;
 }
 #names input {
-  font-size: 100%;
+  font-size: 170%;
   width:80%
   font-family: ShinGo;
 }
@@ -79,7 +79,7 @@ input:focus{
   color: #353839;
   opacity: 0.5;
   font-family:ShinGo;
-  font-size:100%;
+  font-size:170%;
 }
 @keyframes zoom-out {
   0% {
@@ -134,7 +134,7 @@ input:focus{
   background-color:#FFDD00;
   border: solid #FFB700 4px;
   border-radius: 10px;
-  font-size:100%;
+  font-size:160%;
   color: #353839;
 }
 @font-face {
