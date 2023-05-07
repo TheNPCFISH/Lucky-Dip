@@ -82,7 +82,7 @@ input:focus{
   color: #353839;
   opacity: 0.5;
   font-family:ShinGo;
-  font-size:150%;
+  font-size:130%;
 }
 @keyframes zoom-out {
   0% {
