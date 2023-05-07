@@ -14,8 +14,8 @@
 #x {
   opacity:0.5;
   right:10%;
-  top:50%;
-  bottom:50%;
+  /*top:50%;
+  bottom:50%;*/
 }
 #names {
   width: 50%;
