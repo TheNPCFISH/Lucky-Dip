@@ -32,7 +32,7 @@ html, body {
   background-color: #FF006E;
   color:#353839;
   font-family: ShinGo;
-  font-size:110%;
+  font-size:100%;
 }
 h1 {
   font-size:160%;
@@ -40,7 +40,7 @@ h1 {
 }
 button {
   font-family:ShinGo;
-  font-size:110%;
+  font-size:100%;
 }
 input:focus{
   outline: none;
@@ -53,8 +53,9 @@ input:focus{
   color:#353839;
 }
 #names input {
-  font-size: 120%;
+  font-size: 100%;
   width:80%
+  font-family: ShinGo;
 }
 .name {
   box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.2);
@@ -75,7 +76,7 @@ input:focus{
   color: #353839;
   opacity: 0.5;
   font-family:ShinGo;
-  font-size:120%;
+  font-size:100%;
 }
 @keyframes zoom-out {
   0% {
