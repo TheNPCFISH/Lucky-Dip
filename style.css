@@ -89,6 +89,14 @@ input:focus{
 }
 
 @keyframes zoom-in {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform:scale(0);
+    opacity: 0;
+  }
   100% {
     transform: scale(1);
     opacity: 1;
@@ -97,8 +105,8 @@ input:focus{
 
 .name {
   transition:1s;
-  /*transform: scale(1);
-  opacity:1;*/
+  transform: scale(1);
+  opacity:1;
   grid-column: 40%;
   transition-timing-function: ease-in;
 }
@@ -111,8 +119,8 @@ input:focus{
 }
 
 .winner {
-  animation: zoom-out 1s ease;
-  animation: zoom-in 1s ease 1s;
+  /*animation: zoom-out 1s ease;*/
+  animation: zoom-in 2s ease ;
   transition:1s;
   opacity:1;
   transform: scale(1);
