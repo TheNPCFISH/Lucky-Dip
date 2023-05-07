@@ -103,7 +103,7 @@ input:focus{
 }
 
 .name.hide {
-  animation: zoom-out 3s ease;
+  animation: zoom-out 3s ease-in-out;
   transform: scale(0);
   transition:0s;
   opacity:0;
