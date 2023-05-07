@@ -119,8 +119,9 @@ input:focus{
 
 #choose {
   background-color:#FFDD00;
-  border: solid #FFB700 2.5px;
+  border: solid #FFB700 4px;
   border-radius: 10px;
+  font-size:100%;
   color: #353839;
 }
 @font-face {
