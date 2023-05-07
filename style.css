@@ -1,7 +1,7 @@
 .name {
   background-color: #3A86FF;
   color: #FEFFFE;
-  border-radius: 10%;
+  border-radius: 10px;
   border: solid rgba(58, 134, 255,0.5) 2px;
   margin: 10px;
   margin-right: 10px;
@@ -120,7 +120,7 @@ input:focus{
 #choose {
   background-color:#FFDD00;
   border: solid #FFB700 2.5px;
-  border-radius: 10%px;
+  border-radius: 10px;
   color: #353839;
 }
 @font-face {
