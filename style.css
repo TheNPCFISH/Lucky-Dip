@@ -13,7 +13,7 @@
 }
 #x {
   opacity:0.5;
-  filter: blur(2px);
+  filter: blur(0.5px);
 }
 #names {
   width: 50%;
