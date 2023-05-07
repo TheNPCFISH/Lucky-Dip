@@ -1,8 +1,8 @@
 .name {
-  background-color: #3A86FF;
-  color: #FEFFFE;
+  background-color: #B7E4C7;
+  color: #353839;
   border-radius: 10px;
-  border: solid rgba(59, 89, 255,0.5) 5px;
+  border: solid rgba(149, 213, 178,0.5) 5px;
   margin: 10px;
   margin-right: 10px;
   padding-left: 10px;
@@ -35,7 +35,7 @@ button {
   font-weight:bold;
 }*/
 html, body {
-  background-color: #FF006E;
+  background-color: #D8F3DC;
   color:#353839;
   font-family: ShinGo;
   font-size:110%;
@@ -137,8 +137,8 @@ input:focus{
 }
 
 #choose {
-  background-color:#FFDD00;
-  border: solid #FFB700 4px;
+  background-color:#74C69D;
+  border: solid #52B788 4px;
   border-radius: 10px;
   font-size:145%;
   color: #353839;
