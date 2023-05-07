@@ -11,6 +11,9 @@
   padding-bottom: 20px;
   font-size:110%;
 }
+#x {
+  opacity:0.5;
+}
 #names {
   width: 50%;
 }
