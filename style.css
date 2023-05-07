@@ -1,7 +1,7 @@
 .name {
   background-color: #3A86FF;
   color: #FEFFFE;
-  border-radius: 5px;
+  border-radius: 10%;
   border: solid rgba(58, 134, 255,0.5) 2px;
   margin: 10px;
   margin-right: 10px;
@@ -9,7 +9,7 @@
   padding-right: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size:140%;
+  font-size:110%;
 }
 #names {
   width: 50%;
@@ -32,15 +32,15 @@ html, body {
   background-color: #FF006E;
   color:#353839;
   font-family: ShinGo;
-  font-size:140%;
+  font-size:110%;
 }
 h1 {
-  font-size:145%;
+  font-size:140%;
   font-color:#FEFFFE;
 }
 button {
   font-family:ShinGo;
-  font-size:130%;
+  font-size:90%;
 }
 input:focus{
   outline: none;
@@ -53,7 +53,7 @@ input:focus{
   color:#353839;
 }
 #names input {
-  font-size: 120%;
+  font-size: 100%;
   width:70%
 }
 .name {
@@ -75,7 +75,7 @@ input:focus{
   color: #353839;
   opacity: 0.5;
   font-family:ShinGo;
-  font-size:120%;
+  font-size:100%;
 }
 @keyframes zoom-out {
   0% {
@@ -120,7 +120,7 @@ input:focus{
 #choose {
   background-color:#FFDD00;
   border: solid #FFB700 2.5px;
-  border-radius: 5px;
+  border-radius: 10%px;
   color: #353839;
 }
 @font-face {
