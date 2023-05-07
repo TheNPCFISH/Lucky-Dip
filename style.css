@@ -97,9 +97,10 @@ input:focus{
 
 .name {
   transition:1s;
-  transform: scale(1);
-  opacity:1;
+  /*transform: scale(1);
+  opacity:1;*/
   grid-column: 40%;
+  transition-timing-function: ease-in;
 }
 
 .name.hide {
