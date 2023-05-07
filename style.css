@@ -12,10 +12,10 @@
   font-size:150%;
 }
 #x {
-  opacity:0.2;
-  right:10%;
+  opacity:0.5;
+  /*right:10%;
   top:50%;
-  bottom:50%;
+  bottom:50%;*/
 }
 #names {
   width: 50%;
