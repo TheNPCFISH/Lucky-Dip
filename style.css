@@ -13,9 +13,9 @@
 }
 #x {
   opacity:0.5;
-  /*right:10%;
+  right:10%;
   top:50%;
-  bottom:50%;*/
+  bottom:50%;
 }
 #names {
   width: 50%;
@@ -25,7 +25,7 @@ button {
 }
 .name button {
   position: absolute;
-  left: 90%;
+  left: 75%;
   border-radius: 0px;
   border-color:transparent;
   background-color: transparent;
