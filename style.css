@@ -13,7 +13,6 @@
 }
 #x {
   opacity:0.2;
-  filter: blur(0.1px);
 }
 #names {
   width: 50%;
