@@ -32,10 +32,10 @@ html, body {
   background-color: #EF476F;
   color:#FFADAD;
   font-family: ShinGo;
-  font-size:1rem;
+  font-size:10%;
 }
 h1 {
-  font-size:2rem;
+  font-size:15%;
 }
 button {
   font-family:ShinGo;
@@ -52,7 +52,7 @@ input:focus{
   color:#353839;
 }
 #names input {
-  font-size: 1rem;
+  font-size: 10%;
   width:70%
 }
 .name {
@@ -74,7 +74,7 @@ input:focus{
   color: #353839;
   opacity: 0.5;
   font-family:ShinGo;
-  font-size:1rem;
+  font-size:10%;
 }
 @keyframes zoom-out {
   0% {
