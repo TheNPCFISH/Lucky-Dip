@@ -23,13 +23,10 @@ function chooseWinner() {
   let remainingNames = [...names];
   let delay = 1000; // delay in milliseconds
 
-  // hide all disabled names
+  // add the hide class to all disabled names
   const disabledNames = document.querySelectorAll(".disabled");
   disabledNames.forEach(name => {
-    setTimeout(() => {
-      name.classList.add("hide");
-    }, delay);
-    delay += 1000; // increase delay for next name
+    name.classList.add("hide");
   });
 
   while (remainingNames.length > 1) {
@@ -49,9 +46,15 @@ function chooseWinner() {
   }, delay + 1000); // hide last name after winner is shown
   setTimeout(() => {
     names.forEach(name => {
-      name.classList.remove("winner", "hide", "disabled");
+      name.classList.remove("winner", "hide");
       name.classList.add("name");
     });
+    // remove hide class from all disabled names
+    const DN = document.querySelectorAll(".disabled");
+    DN.forEach(name => {
+      name.classList.remove("hide");
+    });
+
   }, delay + 5000); // reset after winner is shown for 5 seconds
 }
 
