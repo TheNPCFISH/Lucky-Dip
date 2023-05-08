@@ -19,26 +19,31 @@ function disableName(event) {
 
 function chooseWinner() {
   const names = document.querySelectorAll(".name");
-  const winnerIndex = Math.floor(Math.random() * names.length);
-  let remainingNames = [...names];
+  const remainingNames = [...names].filter(name => !name.classList.contains("disabled"));
+  const winnerIndex = Math.floor(Math.random() * remainingNames.length);
+  const enabledNames = remainingNames.filter(name => !name.classList.contains("disabled"));
+  const disabledNames = [...names].filter(name => name.classList.contains("disabled"));
   let delay = 1000; // delay in milliseconds
-  while (remainingNames.length > 1) {
-    const randomIndex = Math.floor(Math.random() * remainingNames.length);
-    const nameToRemove = remainingNames[randomIndex];
-    if (nameToRemove !== names[winnerIndex] && !nameToRemove.classList.contains("disabled")) {
-      setTimeout(() => {
-        nameToRemove.classList.add("hide");
-      }, delay);
-      delay += 1000; // increase delay for next name
-    }
-    remainingNames = remainingNames.filter(name => name !== nameToRemove);
-  }
+  disabledNames.forEach(name => {
+    setTimeout(() => {
+      name.classList.add("hide");
+    }, delay);
+    delay += 1000; // increase delay for next name
+  });
   setTimeout(() => {
-    names[winnerIndex].classList.add("winner");
+    enabledNames.forEach((name, index) => {
+      if (index !== winnerIndex) {
+        setTimeout(() => {
+          name.classList.add("hide");
+        }, delay);
+        delay += 1000; // increase delay for next name
+      } else {
+        setTimeout(() => {
+          name.classList.add("winner");
+        }, delay);
+      }
+    });
   }, delay);
-  setTimeout(() => {
-    remainingNames[0].classList.add("hide");
-  }, delay + 1000); // hide last name after winner is shown
   setTimeout(() => {
     names.forEach(name => {
       name.classList.remove("winner", "hide", "disabled");
