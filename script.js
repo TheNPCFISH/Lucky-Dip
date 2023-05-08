@@ -1,28 +1,20 @@
 function Addname() {
- const newName = document
-  .getElementById("text").value;
- const nameArea = document
-  .getElementById("namearea");
- const newDivString =
-  '<div class="name">' + String(newName) +
-  '<button onclick="deleteName(event)" id="x">X</button></div>';
- nameArea.innerHTML += newDivString;
- document.getElementById("text").value = "";
+  const newName = document.getElementById("text").value;
+  const nameArea = document.getElementById("namearea");
+  const newDivString =
+    '<div class="name" onclick="disableName(event)">' + String(newName) +
+    '<button onclick="deleteName(event)" id="x">X</button></div>';
+  nameArea.innerHTML += newDivString;
+  document.getElementById("text").value = "";
 }
 
-function deleteName(event) {
- const divToRemove = event.target
-  .parentNode;
- divToRemove.remove();
-}
-
-function addDeleteListeners() {
- const deleteButtons = document
-  .querySelectorAll("#x");
- deleteButtons.forEach(button => {
-  button.addEventListener("click",
-   deleteName);
- });
+function disableName(event) {
+  const nameToDisable = event.target;
+  if (!nameToDisable.classList.contains("disabled")) {
+    nameToDisable.classList.add("disabled");
+  } else {
+    nameToDisable.classList.remove("disabled");
+  }
 }
 
 function chooseWinner() {
@@ -33,7 +25,7 @@ function chooseWinner() {
   while (remainingNames.length > 1) {
     const randomIndex = Math.floor(Math.random() * remainingNames.length);
     const nameToRemove = remainingNames[randomIndex];
-    if (nameToRemove !== names[winnerIndex]) {
+    if (nameToRemove !== names[winnerIndex] && !nameToRemove.classList.contains("disabled")) {
       setTimeout(() => {
         nameToRemove.classList.add("hide");
       }, delay);
@@ -49,10 +41,22 @@ function chooseWinner() {
   }, delay + 1000); // hide last name after winner is shown
   setTimeout(() => {
     names.forEach(name => {
-      name.classList.remove("winner", "hide");
+      name.classList.remove("winner", "hide", "disabled");
       name.classList.add("name");
     });
   }, delay + 5000); // reset after winner is shown for 5 seconds
+}
+
+function deleteName(event) {
+  const divToRemove = event.target.parentNode;
+  divToRemove.remove();
+}
+
+function addDeleteListeners() {
+  const deleteButtons = document.querySelectorAll("#x");
+  deleteButtons.forEach(button => {
+    button.addEventListener("click", deleteName);
+  });
 }
 
 var input = document.getElementById("text");
