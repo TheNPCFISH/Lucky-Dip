@@ -13,6 +13,7 @@
 }
 .disabled {
   filter:grayscale(100%);
+  transition: 0.5s !important;
 }
 #x {
   opacity:0.5;
