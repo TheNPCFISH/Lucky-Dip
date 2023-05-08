@@ -27,24 +27,31 @@ function addDeleteListeners() {
 addDeleteListeners();
 
 function chooseWinner() {
- const names = document
-  .querySelectorAll(".name");
- const winnerIndex = Math.floor(Math
-  .random() * names.length);
- names.forEach((name, index) => {
-  if (index !== winnerIndex) {
-   name.classList.add("hide");
-  } else {
-   name.classList.add("winner");
+  const names = document.querySelectorAll(".name");
+  const winnerIndex = Math.floor(Math.random() * names.length);
+  let remainingNames = [...names];
+  let delay = 500; // delay in milliseconds
+  while (remainingNames.length > 1) {
+    const randomIndex = Math.floor(Math.random() * remainingNames.length);
+    const nameToRemove = remainingNames[randomIndex];
+    if (nameToRemove !== names[winnerIndex]) {
+      setTimeout(() => {
+        nameToRemove.classList.add("hide");
+      }, delay);
+      delay += 500; // increase delay for next name
+    }
+    remainingNames = remainingNames.filter(name => name !== nameToRemove);
   }
- });
- setTimeout(() => {
-  names.forEach(name => {
-   name.classList.remove("winner",
-    "hide");
-   name.classList.add("name");
-  });
- }, 5000);
+  setTimeout(() => {
+    names[winnerIndex].classList.add("winner");
+    remainingNames[0].classList.add("hide");
+  }, delay);
+  setTimeout(() => {
+    names.forEach(name => {
+      name.classList.remove("winner", "hide");
+      name.classList.add("name");
+    });
+  }, delay + 5000); // reset after winner is shown for 5 seconds
 }
 
 var input = document.getElementById("text");
