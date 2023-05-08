@@ -55,7 +55,7 @@ function chooseWinner() {
       name.classList.remove("hide", "disabled");
       name.classList.add("name");
     });
-  }, delay + 1000); // reset after winner is shown for 1 second
+  }, delay + 5000); // reset after winner is shown for 1 second
 }
 
 function deleteName(event) {
