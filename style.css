@@ -11,6 +11,9 @@
   padding-bottom: 20px;
   font-size:150%;
 }
+.disabled {
+  filter:grayscale(100%);
+}
 #x {
   opacity:0.5;
   /*right:10%;
