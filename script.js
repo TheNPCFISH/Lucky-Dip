@@ -18,7 +18,7 @@ function disableName(event) {
 }
 
 function chooseWinner() {
-  const names = document.querySelectorAll(".name");
+  const names = document.querySelectorAll(".name:not(.disabled)"); // only select names that are not disabled
   const winnerIndex = Math.floor(Math.random() * names.length);
   let remainingNames = [...names];
   let delay = 1000; // delay in milliseconds
@@ -31,9 +31,6 @@ function chooseWinner() {
     }, delay);
     delay += 1000; // increase delay for next name
   });
-
-  // remove disabled names from remainingNames array
-  remainingNames = remainingNames.filter(name => !name.classList.contains("disabled"));
 
   while (remainingNames.length > 1) {
     const randomIndex = Math.floor(Math.random() * remainingNames.length);
