@@ -140,9 +140,9 @@ input:focus{
 .winner {
   /*animation: zoom-out 1s ease;
   animation: zoom-in 2s ease ;*/
-  transition:1s;
+  transition:0s;
   opacity:1;
-  transform: scale(1);
+  transform: scale(1) !important;
 }
 
 #choose {
