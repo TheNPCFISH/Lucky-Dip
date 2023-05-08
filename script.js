@@ -52,7 +52,7 @@ function chooseWinner() {
   }, delay + 1000); // hide last name after winner is shown
   setTimeout(() => {
     names.forEach(name => {
-      name.classList.remove("winner", "hide", "disabled");
+      name.classList.remove("winner", "hide");
       name.classList.add("name");
     });
   }, delay + 5000); // reset after winner is shown for 5 seconds
