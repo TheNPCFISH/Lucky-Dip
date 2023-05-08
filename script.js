@@ -42,7 +42,7 @@ function chooseWinner() {
     setTimeout(() => {
       nameToRemove.classList.add("hide");
     }, delay);
-    delay += 1000; // increase delay for next name
+    delay += 1250; // increase delay for next name
     remainingNames.splice(randomIndex, 1);
   }
 
