@@ -19,35 +19,43 @@ function disableName(event) {
 
 function chooseWinner() {
   const names = document.querySelectorAll(".name:not(.disabled)"); // only select names that are not disabled
-  const winnerIndex = Math.floor(Math.random() * names.length);
-  let remainingNames = [...names];
-  let delay = 1000; // delay in milliseconds
+  const remainingNames = [...names];
+  const disabledNames = document.querySelectorAll(".disabled");
+  disabledNames.forEach(name => {
+    name.classList.add("hide");
+  });
 
-  while (remainingNames.length > 1) {
+  if (names.length === 0) {
+    alert("No names to choose from!");
+    return;
+  }
+
+  let delay = 1000; // delay in milliseconds
+  const winnerIndex = Math.floor(Math.random() * names.length);
+  const winnerName = names[winnerIndex];
+  winnerName.classList.add("winner");
+  remainingNames.splice(winnerIndex, 1);
+
+  while (remainingNames.length > 0) {
     const randomIndex = Math.floor(Math.random() * remainingNames.length);
     const nameToRemove = remainingNames[randomIndex];
     setTimeout(() => {
       nameToRemove.classList.add("hide");
     }, delay);
     delay += 1000; // increase delay for next name
-    remainingNames = remainingNames.filter(name => name !== nameToRemove);
+    remainingNames.splice(randomIndex, 1);
   }
-  setTimeout(() => {
-    remainingNames[0].classList.add("hide");
-    names[winnerIndex].classList.add("winner");
-  }, delay + 1000); // hide last name after winner is shown
 
   setTimeout(() => {
-    names.forEach(name => {
-      name.classList.remove("winner", "hide");
-      name.classList.add("name");
-    });
-    // remove hide class from all disabled names
-    const disabledNames = document.querySelectorAll(".disabled");
+    winnerName.classList.remove("winner");
     disabledNames.forEach(name => {
       name.classList.remove("hide");
     });
-  }, delay + 5000); // reset after winner is shown for 5 seconds
+    names.forEach(name => {
+      name.classList.remove("hide", "disabled");
+      name.classList.add("name");
+    });
+  }, delay + 1000); // reset after winner is shown for 1 second
 }
 
 function deleteName(event) {
