@@ -24,13 +24,12 @@ function addDeleteListeners() {
    deleteName);
  });
 }
-addDeleteListeners();
 
 function chooseWinner() {
   const names = document.querySelectorAll(".name");
   const winnerIndex = Math.floor(Math.random() * names.length);
   let remainingNames = [...names];
-  let delay = 500; // delay in milliseconds
+  let delay = 1000; // delay in milliseconds
   while (remainingNames.length > 1) {
     const randomIndex = Math.floor(Math.random() * remainingNames.length);
     const nameToRemove = remainingNames[randomIndex];
@@ -38,14 +37,16 @@ function chooseWinner() {
       setTimeout(() => {
         nameToRemove.classList.add("hide");
       }, delay);
-      delay += 500; // increase delay for next name
+      delay += 1000; // increase delay for next name
     }
     remainingNames = remainingNames.filter(name => name !== nameToRemove);
   }
   setTimeout(() => {
     names[winnerIndex].classList.add("winner");
-    remainingNames[0].classList.add("hide");
   }, delay);
+  setTimeout(() => {
+    remainingNames[0].classList.add("hide");
+  }, delay + 1000); // hide last name after winner is shown
   setTimeout(() => {
     names.forEach(name => {
       name.classList.remove("winner", "hide");
