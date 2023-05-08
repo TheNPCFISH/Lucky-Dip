@@ -19,87 +19,44 @@ function disableName(event) {
 
 function chooseWinner() {
   const names = document.querySelectorAll(".name");
-  const remainingNames = [...names].filter(name => !name.classList.contains("disabled"));
-function Addname() {
-  const newName = document.getElementById("text").value;
-  const nameArea = document.getElementById("namearea");
-  const newDivString =
-    '<div class="name">' +
-    String(newName) +
-    '<button onclick="deleteName(event)" class="delete">X</button></div>';
-  nameArea.innerHTML += newDivString;
-  document.getElementById("text").value = "";
-  addClickListeners();
-}
-
-function deleteName(event) {
-  const divToRemove = event.target.parentNode;
-  divToRemove.remove();
-}
-
-function addClickListeners() {
-  const nameElements = document.querySelectorAll(".name");
-  nameElements.forEach(nameElement => {
-    nameElement.addEventListener("click", event => {
-      event.target.classList.toggle("disabled");
-    });
-  });
-}
-
-function chooseWinner() {
-  const names = document.querySelectorAll(".name");
-  const disabledNames = document.querySelectorAll(".name.disabled");
   const winnerIndex = Math.floor(Math.random() * names.length);
   let remainingNames = [...names];
   let delay = 1000; // delay in milliseconds
 
-  // Hide disabled names first
-  disabledNames.forEach(disabledName => {
+  // hide all disabled names
+  const disabledNames = document.querySelectorAll(".disabled");
+  disabledNames.forEach(name => {
     setTimeout(() => {
-      disabledName.classList.add("hide");
+      name.classList.add("hide");
     }, delay);
-    delay += 1000;
+    delay += 1000; // increase delay for next name
   });
 
-  // Hide non-disabled names one by one
+  // remove disabled names from remainingNames array
+  remainingNames = remainingNames.filter(name => !name.classList.contains("disabled"));
+
   while (remainingNames.length > 1) {
     const randomIndex = Math.floor(Math.random() * remainingNames.length);
     const nameToRemove = remainingNames[randomIndex];
-    if (nameToRemove !== names[winnerIndex] && !nameToRemove.classList.contains("disabled")) {
-      setTimeout(() => {
-        nameToRemove.classList.add("hide");
-      }, delay);
-      delay += 1000; // increase delay for next name
-    }
+    setTimeout(() => {
+      nameToRemove.classList.add("hide");
+    }, delay);
+    delay += 1000; // increase delay for next name
     remainingNames = remainingNames.filter(name => name !== nameToRemove);
   }
-
-  // Show winner
   setTimeout(() => {
     names[winnerIndex].classList.add("winner");
   }, delay);
-
-  // Hide last name after winner is shown
   setTimeout(() => {
     remainingNames[0].classList.add("hide");
-  }, delay + 1000);
-
-  // Reset after winner is shown for 5 seconds
+  }, delay + 1000); // hide last name after winner is shown
   setTimeout(() => {
     names.forEach(name => {
-      name.classList.remove("winner", "hide");
+      name.classList.remove("winner", "hide", "disabled");
       name.classList.add("name");
     });
-  }, 5000);
+  }, delay + 5000); // reset after winner is shown for 5 seconds
 }
-
-var input = document.getElementById("text");
-input.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("add").click();
-  }
-});
 
 function deleteName(event) {
   const divToRemove = event.target.parentNode;
