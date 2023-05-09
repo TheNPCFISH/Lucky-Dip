@@ -16,6 +16,14 @@
   transition: top !important 1s ease-in-out;
   transition: bottom !important 1s ease-in-out;
 }
+button:disabled,button[disabled] {
+  transform: scale(0);
+  transition: 1s;
+}
+button {
+  transform:scale(1);
+  transition:1s;
+}
 .remove {
   animation: zoom-out 1s ease-in-out;
 }
