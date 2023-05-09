@@ -151,7 +151,13 @@ input:focus{
   transition:0s;
   opacity:0;
 }
-
+@keyframes show {
+  0%,100% { transform: scale(1); opacity:1; }
+  75% { transform: scale(0); opacity:0; }
+}
+show {
+  animation: show 1s ease-in-out;
+}
 .winner {
   /*animation: zoom-out 1s ease;
   animation: zoom-in 2s ease ;*/
