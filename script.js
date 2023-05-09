@@ -76,15 +76,15 @@ function deleteName(event) {
   const delay = 1000;
 
   disabledNames.forEach(name => {
-    name.classList.add("hide");
+    name.classList.add("show");
   });
 
   names.forEach(name => {
-    name.classList.add("hide");
+    name.classList.add("show");
   });
 
   setTimeout(() => {
-    divToRemove.classList.add("remove");
+    divToRemove.classList.add("show");
     setTimeout(() => {
       divToRemove.remove();
     }, delay);
@@ -92,10 +92,10 @@ function deleteName(event) {
 
   setTimeout(() => {
     disabledNames.forEach(name => {
-      name.classList.remove("hide");
+      name.classList.remove("show");
     });
     names.forEach(name => {
-      name.classList.remove("hide", "disabled");
+      name.classList.remove("show");
       name.classList.add("name");
     });
   }, delay * 2);
