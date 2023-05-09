@@ -61,51 +61,12 @@ function chooseWinner() {
   add.disabled = false;
 }
 
-/*function deleteName(event) {
+function deleteName(event) {
   const divToRemove = event.target.parentNode;
   divToRemove.classList.add("remove");
   setTimeout(() => {
       divToRemove.remove();
     }, 1000);
-}*/
-
-function deleteName(event) {
-  const divToRemove = event.target.parentNode;
-  const names = document.querySelectorAll(".name");
-  const disabledNames = document.querySelectorAll(".disabled");
-  const delay = 1000;
-
-  disabledNames.forEach(name => {
-    name.classList.add("show");
-  });
-
-  names.forEach(name => {
-    name.classList.add("show");
-  });
-
-  setTimeout(() => {
-    divToRemove.classList.add("show");
-    setTimeout(() => {
-      divToRemove.remove();
-    }, delay);
-  }, delay);
-
-  setTimeout(() => {
-    disabledNames.forEach(name => {
-      name.classList.remove("show");
-    });
-    names.forEach(name => {
-      name.classList.remove("show");
-      name.classList.add("name");
-    });
-  }, delay * 2);
-}
-
-function addDeleteListeners() {
-  const deleteButtons = document.querySelectorAll("#x");
-  deleteButtons.forEach(button => {
-    button.addEventListener("click", deleteName);
-  });
 }
 
 var input = document.getElementById("text");
