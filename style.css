@@ -44,6 +44,7 @@ button {
   font-weight:bold;
 }*/
 html, body {
+  transition: all 1s;
   background-color: #D8F3DC;
   color:#353839;
   font-family: ShinGo;
@@ -128,7 +129,7 @@ input:focus{
 
 .name {
   position:relative;
-  transition: all 1s !important;
+  /*transition: all 1s !important;*/
   transform: scale(1);
   opacity:1;
   grid-column: 40%;
