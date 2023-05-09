@@ -126,7 +126,7 @@ input:focus{
 }
 
 .name {
-  transition:1s;
+  transition:all 1s;
   transform: scale(1);
   opacity:1;
   grid-column: 40%;
