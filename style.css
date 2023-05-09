@@ -10,13 +10,14 @@
   padding-top: 20px;
   padding-bottom: 20px;
   font-size:150%;
+  position: auto;
 }
 .remove {
   animation: zoom-out 1s ease-in-out;
 }
 .disabled {
   filter:grayscale(100%);
-  transition: 0.5s !important;
+  transition: 0.25s !important;
 }
 #x {
   opacity:0.5;
@@ -126,7 +127,8 @@ input:focus{
 }
 
 .name {
-  transition:all 1s;
+  position:relative;
+  transition: all 1s !important;
   transform: scale(1);
   opacity:1;
   grid-column: 40%;
