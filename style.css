@@ -11,10 +11,7 @@
   padding-bottom: 20px;
   font-size:150%;
   position: auto;
-  transition: left !important 1s ease-in-out;
-  transition: right !important 1s ease-in-out;
-  transition: top !important 1s ease-in-out;
-  transition: bottom !important 1s ease-in-out;
+  transition:1s ease-in-out;
 }
 button:disabled,button[disabled] {
   transform: scale(0);
