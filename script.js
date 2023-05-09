@@ -60,6 +60,9 @@ function chooseWinner() {
 
 function deleteName(event) {
   const divToRemove = event.target.parentNode;
+  setTimeout(() => {
+      divToRemove.classList.add("remove");
+    }, 999);
   divToRemove.remove();
 }
 
