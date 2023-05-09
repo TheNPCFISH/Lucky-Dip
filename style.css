@@ -153,10 +153,10 @@ input:focus{
 }
 @keyframes show {
   0%,100% { transform: scale(1); opacity:1; }
-  75% { transform: scale(0); opacity:0; }
+  50% { transform: scale(0); opacity:0; }
 }
 show {
-  animation: show 1s ease-in-out;
+  animation: show 2s ease-in-out;
 }
 .winner {
   /*animation: zoom-out 1s ease;
