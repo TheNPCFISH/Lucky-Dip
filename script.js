@@ -19,6 +19,8 @@ function disableName(event) {
 
 function chooseWinner() {
   const names = document.querySelectorAll(".name:not(.disabled)"); // only select names that are not disabled
+  const add = document.getElementById("add")
+  add.disabled = true;
   const remainingNames = [...names];
   const disabledNames = document.querySelectorAll(".disabled");
   disabledNames.forEach(name => {
@@ -56,6 +58,7 @@ function chooseWinner() {
       name.classList.add("name");
     });
   }, delay + 5000); // reset after winner is shown for 1 second
+  add.disabled = false;
 }
 
 function deleteName(event) {
