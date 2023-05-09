@@ -56,7 +56,7 @@ html, body {
   background-color: #D8F3DC;
   color:#353839;
   font-family: ShinGo;
-  font-size:110%;
+  font-size:135%;
   height:100%;
   padding:0;
   margin:0;
@@ -201,8 +201,8 @@ show {
 
 .checkmark {
   position: relative;
-  width: 20px;
-  height: 20px;
+  width: 60px;
+  height: 60px;
   border: 1px solid #353839;
   border-radius: 4px;
   margin-right: 10px;
@@ -214,8 +214,8 @@ show {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  width: 12px;
-  height: 12px;
+  width: 60%;
+  height: 60%;
   border-radius: 2px;
   background-color: #353839;
 }
