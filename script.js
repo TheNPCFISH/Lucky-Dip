@@ -60,10 +60,10 @@ function chooseWinner() {
 
 function deleteName(event) {
   const divToRemove = event.target.parentNode;
+  divToRemove.classList.add("remove");
   setTimeout(() => {
-      divToRemove.classList.add("remove");
-    }, 999);
-  divToRemove.remove();
+      divToRemove.remove();
+    }, 1000);
 }
 
 function addDeleteListeners() {
