@@ -37,7 +37,7 @@ function chooseWinner() {
   const winnerName = names[winnerIndex];
   winnerName.classList.add("winner");
   remainingNames.splice(winnerIndex, 1);
-
+  const checkbox = document.getElementById('check');
   while (remainingNames.length > 0) {
     const randomIndex = Math.floor(Math.random() * remainingNames.length);
     const nameToRemove = remainingNames[randomIndex];
@@ -47,23 +47,20 @@ function chooseWinner() {
     delay += 1250; // increase delay for next name
     remainingNames.splice(randomIndex, 1);
   }
-  const checkbox = document.getElementById('check');
-
-// Check if the checkbox is checked
-if (checkbox.checked) {
-  console.log('Auto-Disable');
-  winnerName.classList.add("disabled");
-} else {
-  console.log('No Auto-Disable');
-}
 
   setTimeout(() => {
     winnerName.classList.remove("winner");
+    if (checkbox.checked) {
+      console.log('Auto-Disable');
+      winnerName.classList.add("disabled");
+    } else {
+      console.log('No Auto-Disable');
+    }
     disabledNames.forEach(name => {
       name.classList.remove("hide");
     });
     names.forEach(name => {
-      name.classList.remove("hide", "disabled");
+      name.classList.remove("hide");
       name.classList.add("name");
     });
   }, delay + 5000); // reset after winner is shown for 1 second
