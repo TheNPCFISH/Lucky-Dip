@@ -29,10 +29,10 @@ function chooseWinner() {
 
   if (names.length === 0) {
     alert("No names to choose from!");
-    return;
+    break;
   }
 
-  let delay = 1000; // delay in milliseconds
+  let delay = 500; // delay in milliseconds
   const winnerIndex = Math.floor(Math.random() * names.length);
   const winnerName = names[winnerIndex];
   winnerName.classList.add("winner");
@@ -44,7 +44,7 @@ function chooseWinner() {
     setTimeout(() => {
       nameToRemove.classList.add("hide");
     }, delay);
-    delay += 1250; // increase delay for next name
+    delay += 500; // increase delay for next name
     remainingNames.splice(randomIndex, 1);
   }
 
