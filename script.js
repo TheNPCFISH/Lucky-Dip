@@ -58,6 +58,17 @@ function chooseWinner() {
       name.classList.add("name");
     });
   }, delay + 5000); // reset after winner is shown for 1 second
+  // Get the checkbox element
+const checkbox = document.getElementById('check');
+
+// Check if the checkbox is checked
+if (checkbox.checked) {
+  console.log('Auto-Disable');
+  winnerName.classlist.add("disabled")
+} else {
+  console.log('No Auto-Disable');
+}
+
   add.disabled = false;
 }
 
