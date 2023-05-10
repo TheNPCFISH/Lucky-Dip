@@ -63,7 +63,7 @@ function chooseWinner() {
       name.classList.remove("hide");
       name.classList.add("name");
     });
-  }, 5000);
+  },delay + 5000);
 
   add.disabled = false;
 }
