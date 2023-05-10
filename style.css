@@ -52,6 +52,9 @@ button {
 /*#add {
   font-weight:bold;
 }*/
+.custom-checkbox {
+  font-size:110%;
+}
 html, body {
   background-color: #D8F3DC;
   color:#353839;
