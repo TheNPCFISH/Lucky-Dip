@@ -63,8 +63,7 @@ function chooseWinner() {
       name.classList.remove("hide");
       name.classList.add("name");
     });
-  }, delay + 5000); // reset after winner is shown for 1 second
-  // Get the checkbox element
+  }, 5000);
 
   add.disabled = false;
 }
