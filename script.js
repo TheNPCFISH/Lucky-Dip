@@ -47,14 +47,12 @@ function chooseWinner() {
     delay += 1250; // increase delay for next name
     remainingNames.splice(randomIndex, 1);
   }
-var elements = document.getElementsByClassName("winner");
   const checkbox = document.getElementById('check');
 
 // Check if the checkbox is checked
 if (checkbox.checked) {
   console.log('Auto-Disable');
-  for (var i = 0; i < elements.length; i++) {
-  elements[i].classList.add("disabled");
+  winnerName.classList.add("disabled");
 }
 } else {
   console.log('No Auto-Disable');
