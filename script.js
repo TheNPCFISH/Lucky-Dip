@@ -53,7 +53,6 @@ function chooseWinner() {
 if (checkbox.checked) {
   console.log('Auto-Disable');
   winnerName.classList.add("disabled");
-}
 } else {
   console.log('No Auto-Disable');
 }
