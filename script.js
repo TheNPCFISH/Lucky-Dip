@@ -29,7 +29,7 @@ function chooseWinner() {
 
   if (names.length === 0) {
     alert("No names to choose from!");
-    break;
+    return;
   }
 
   let delay = 500; // delay in milliseconds
